@@ -1,0 +1,134 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ------------------------------------------------------------------ */
+/* SKIMART design tokens                                               */
+/* Central source of truth for the brand palette. Tailwind maps to    */
+/* these variables so the whole identity can be adjusted from here.   */
+/* ------------------------------------------------------------------ */
+:root {
+  /* Brand palette */
+  --brand-orange: #f28c28;
+  --brand-orange-deep: #e7791d;
+  --brand-green: #245c38;
+  --brand-green-deep: #173f28;
+  --brand-green-leaf: #3c7948;
+  --brand-green-pale: #eef5e8;
+  --brand-green-light: #f5f8f0;
+  --brand-cream: #fff4e4;
+  --brand-orange-tint: #fce7cf;
+
+  /* Surfaces */
+  --surface-main: #ffffff;
+  --surface-secondary: #fafbf8;
+  --surface-subtle: #f7f9f5;
+
+  /* Text */
+  --ink: #202820;
+  --ink-secondary: #626b62;
+  --ink-muted: #7b837b;
+
+  /* Lines & states */
+  --line: #e5e9e2;
+  --state-error: #c0392b;
+  --state-success: #267443;
+  --state-warning: #a96610;
+
+  /* Styling scale */
+  --radius-control: 10px;
+  --radius-card: 16px;
+  --radius-banner: 20px;
+  --shadow-card: 0 1px 2px rgba(23, 63, 40, 0.04),
+    0 4px 16px rgba(23, 63, 40, 0.06);
+  --shadow-card-hover: 0 2px 4px rgba(23, 63, 40, 0.06),
+    0 12px 28px rgba(23, 63, 40, 0.12);
+  --shadow-header: 0 1px 0 var(--line);
+  --shadow-popover: 0 8px 32px rgba(23, 63, 40, 0.16);
+  --shadow-focus: 0 0 0 3px rgba(242, 140, 40, 0.35);
+
+  /* Motion */
+  --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
+  --duration-fast: 150ms;
+  --duration-base: 200ms;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
+  body {
+    @apply bg-white text-ink font-sans antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  img {
+    @apply block max-w-full;
+  }
+
+  button,
+  a,
+  input,
+  select,
+  textarea {
+    &:focus-visible {
+      outline: 2px solid var(--brand-orange);
+      outline-offset: 2px;
+    }
+  }
+
+  ::selection {
+    background-color: var(--brand-orange-tint);
+    color: var(--ink);
+  }
+}
+
+@layer components {
+  /* Accessibly hidden but present for screen readers */
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+
+  .scrollbar-thin {
+    scrollbar-width: thin;
+    scrollbar-color: var(--line) transparent;
+  }
+
+  .line-clamp-1 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+  }
+
+  .line-clamp-2 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+}
