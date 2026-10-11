@@ -1,9 +1,9 @@
 import { useEffect } from 'react'
 import { Outlet, useLocation } from 'react-router-dom'
 import { SiteHeader } from '@/components/layout/SiteHeader'
-import { ServiceTrustStrip } from '@/components/layout/ServiceTrustStrip'
 import { SiteFooter } from '@/components/layout/SiteFooter'
 import { Toaster } from '@/components/ui/Toaster'
+import { WelcomeModal } from '@/components/ui/WelcomeModal'
 
 /** Reset scroll position on navigation (respects reduced-motion). */
 function ScrollToTop() {
@@ -16,11 +16,11 @@ function ScrollToTop() {
 
 export function SiteLayout() {
   return (
-    <div className="flex min-h-screen flex-col bg-white">
+    <div className="isolate flex min-h-screen flex-col bg-white">
       <ScrollToTop />
       <Toaster />
+      <WelcomeModal />
       <SiteHeader />
-      <ServiceTrustStrip />
       <main className="flex-1">
         <Outlet />
       </main>

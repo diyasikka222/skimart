@@ -38,11 +38,11 @@ export function DeliveryLocationSelector() {
       <button
         type="button"
         onClick={openDialog}
-        className="group inline-flex h-11 max-w-[220px] items-center gap-2 rounded-control px-2.5 transition-colors duration-standard ease-standard hover:bg-surface-subtle focus-visible:outline-2 focus-visible:outline-offset-1 focus-visible:outline-brand-orange"
+        className="group inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-control px-0 transition-colors duration-standard ease-standard hover:bg-surface-subtle focus-visible:outline-2 focus-visible:outline-offset-1 focus-visible:outline-brand-orange lg:w-auto lg:max-w-[220px] lg:justify-start lg:gap-2 lg:px-2.5"
         aria-label="Select delivery location"
       >
         <MapPin aria-hidden className="h-5 w-5 shrink-0 text-brand-orange" strokeWidth={2.2} />
-        <span className="min-w-0">
+        <span className="hidden min-w-0 lg:block">
           <span className="block truncate text-sm font-semibold text-ink">{label}</span>
           <span className="block text-[11px] leading-tight text-ink-muted">
             Home delivery {pin ? `· ${pin}` : 'available'}
@@ -50,7 +50,7 @@ export function DeliveryLocationSelector() {
         </span>
         <ChevronDown
           aria-hidden
-          className="h-4 w-4 shrink-0 text-ink-muted transition-transform duration-standard group-hover:text-ink-secondary"
+          className="hidden h-4 w-4 shrink-0 text-ink-muted transition-transform duration-standard group-hover:text-ink-secondary lg:block"
         />
       </button>
 

@@ -43,7 +43,7 @@ export const infoPages: Record<string, InfoPageContent> = {
       {
         heading: 'Is this live store actually delivering now?',
         paragraphs: [
-          'Not yet. This storefront is in a demonstration phase. You can browse the catalogue, search products, build a cart and save favourites, but orders are not placed through this website yet. Check the Delivery Information page for updates.',
+          'Not yet. The checkout on this site is a front-end demonstration: you can walk through a mock order, a simulated payment and a confirmation screen, but no order reaches the store and no delivery is scheduled.',
         ],
       },
       {
@@ -55,19 +55,19 @@ export const infoPages: Record<string, InfoPageContent> = {
       {
         heading: 'Can I pay online?',
         paragraphs: [
-          'Online payments are not enabled in this phase. Payments will be part of a later phase and only after a production checkout is in place.',
+          'Real online payments are not enabled. The checkout includes a clearly labelled payment simulation that never collects card, UPI, banking or OTP details, and no money ever moves.',
         ],
       },
       {
         heading: 'How do I add a product to my cart?',
         paragraphs: [
-          'Open any product card or product page and tap the orange “Add” button. The cart icon in the header shows your count. You can adjust quantities there too. This cart is stored only on your device for now.',
+          'Open any product card or product page and tap the orange “Add” button. The cart icon in the header opens your cart. You can adjust quantities and check out from there. Your cart and any demo orders are stored only on your own device.',
         ],
       },
       {
         heading: 'Is my data safe on this site?',
         paragraphs: [
-          'In this phase the site only stores your cart and favourite product references on your own device. We do not request or store passwords, payment details or sensitive personal information.',
+          'In this phase the site only stores your cart, favourites and any demo order records on your own device. We do not request or store passwords, payment details or sensitive personal information.',
         ],
       },
     ],
@@ -87,7 +87,7 @@ export const infoPages: Record<string, InfoPageContent> = {
       {
         heading: 'What is confirmed right now?',
         paragraphs: [
-          'Nothing about delivery is guaranteed at this stage. Delivery zones, charges, minimum order values and delivery times are being implemented in later phases and will be displayed only when confirmed by the store.',
+          'Nothing about delivery is guaranteed at this stage. The checkout shows a mock delivery fee and a free-delivery threshold so the experience can be reviewed, but these are demonstration rules — not a claim of live service. Delivery zones, charges, minimum order values and delivery times will be displayed only when confirmed by the store.',
         ],
       },
       {
@@ -137,9 +137,9 @@ export const infoPages: Record<string, InfoPageContent> = {
         ],
       },
       {
-        heading: 'No orders in this phase',
+        heading: 'Checkout is a simulation',
         paragraphs: [
-          'You cannot place a binding order through this website in its current phase. Cart and favourite features are for evaluating the experience only.',
+          'The cart and checkout are front-end demonstrations. Completing them creates a mock order stored only in your browser; it is not sent to the store, does not constitute a binding order, and no delivery is scheduled. The payment step is simulated and processes no money.',
         ],
       },
       {

@@ -16,7 +16,7 @@ export function CategoriesPage() {
           description="Browse the whole store by department and find what your home needs."
         />
       </div>
-      <div className="mt-8 grid grid-cols-3 gap-x-2 gap-y-6 min-[420px]:grid-cols-4 sm:gap-x-3 md:grid-cols-5 lg:grid-cols-8">
+      <div data-category-grid className="mt-8 grid grid-cols-4 gap-x-2 gap-y-6 sm:gap-x-3 md:grid-cols-8">
         {list.map((category) => (
           <CategoryCard key={category.slug} category={category} itemCount={category.itemCount} />
         ))}

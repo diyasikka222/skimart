@@ -17,6 +17,8 @@ export const assetUrls = {
 
   heroGroceryBasket: img('photo-1542838132-92c53300491e', 1200),
   heroFallback: '/images/hero-fallback.svg',
+  /** Store-supplied landing-page photograph: SKIMART logo over a mountain-town sunset. */
+  heroSunsetBackground: '/images/skimart-sunset-background.png',
   storeInterior: img('photo-1578916171728-46686eac8d58', 900),
   deliveryBoxes: img('photo-1530982011887-3cc11cc85693', 900),
 

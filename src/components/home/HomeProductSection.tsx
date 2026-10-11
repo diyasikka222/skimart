@@ -10,21 +10,23 @@ export function HomeProductSection() {
   return (
     <section aria-labelledby="favourites-heading" className="mt-10 lg:mt-14">
       <PageContainer>
-        <SectionHeading
-          id="favourites-heading"
-          title="Everyday favourites"
-          subtitle="The products your family reaches for, week after week."
-          actionLabel="View more"
-          actionTo="/categories"
-        />
-        <div className="mb-4">
-          <DemoNotice />
+        <div className="rounded-card border border-line bg-white p-5 shadow-card sm:p-6">
+          <SectionHeading
+            id="favourites-heading"
+            title="Everyday favourites"
+            subtitle="The products your family reaches for, week after week."
+            actionLabel="View more"
+            actionTo="/categories"
+          />
+          <div className="mb-4">
+            <DemoNotice />
+          </div>
+          <ProductGrid
+            products={products}
+            emptyTitle="Favourites coming soon"
+            emptyDescription="Check back once the store confirms its catalogue."
+          />
         </div>
-        <ProductGrid
-          products={products}
-          emptyTitle="Favourites coming soon"
-          emptyDescription="Check back once the store confirms its catalogue."
-        />
       </PageContainer>
     </section>
   )

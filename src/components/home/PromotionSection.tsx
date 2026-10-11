@@ -43,7 +43,7 @@ export function PromotionSection() {
         {promotions.map((promo) => (
           <article
             key={promo.key}
-            className={`group relative overflow-hidden rounded-card ${promo.bg} p-6`}
+            className={`group relative overflow-hidden rounded-card ${promo.bg} p-6 ring-1 ring-white/70`}
           >
             <div className="flex h-full flex-col gap-4">
               <div className="relative h-36 overflow-hidden rounded-card sm:h-44">

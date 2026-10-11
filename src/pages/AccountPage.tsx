@@ -32,6 +32,11 @@ export function AccountPage() {
               Preview the login page
             </Button>
           </div>
+          <div className="mt-3">
+            <Button to="/orders" variant="ghost" fullWidth>
+              View my demo orders
+            </Button>
+          </div>
 
           <div className="mt-6 border-t border-line pt-5 text-left">
             <p className="text-sm font-semibold text-ink">Account features planned</p>

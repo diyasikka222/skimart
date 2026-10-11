@@ -106,12 +106,23 @@ export function CartDrawer({ open, onClose }: CartDrawerProps) {
               Delivery charges and offers are calculated at checkout.
             </p>
             <div className="mt-4">
-              <Button size="lg" fullWidth onClick={() => toast.info('Checkout arrives in a later phase.')}>
+              <Button
+                size="lg"
+                fullWidth
+                to="/checkout"
+                onClick={onClose}
+              >
                 Proceed to checkout
               </Button>
             </div>
+            <div className="mt-2.5">
+              <Button variant="ghost" size="sm" fullWidth to="/cart" onClick={onClose}>
+                <ShoppingBag aria-hidden className="h-4 w-4" />
+                View full cart
+              </Button>
+            </div>
             <p className="mt-3 text-center text-xs text-ink-muted">
-              Demonstration cart — orders are not placed in this phase.
+              Demonstration checkout — no payment is processed and no real order is placed.
             </p>
           </div>
         </>

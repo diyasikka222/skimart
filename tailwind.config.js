@@ -48,6 +48,10 @@ export default {
       maxWidth: {
         container: '1440px',
       },
+      spacing: {
+        // Extra step used by the large button size (h-13 = 52px).
+        13: '3.25rem',
+      },
       borderRadius: {
         control: 'var(--radius-control)',
         card: 'var(--radius-card)',
@@ -61,6 +65,25 @@ export default {
       },
       transitionTimingFunction: {
         standard: 'var(--ease-standard)',
+      },
+      keyframes: {
+        marquee: {
+          from: { transform: 'translateX(0)' },
+          to: { transform: 'translateX(-50%)' },
+        },
+        'welcome-fade': {
+          from: { opacity: '0' },
+          to: { opacity: '1' },
+        },
+        'welcome-pop': {
+          '0%': { opacity: '0', transform: 'scale(0.88) translateY(12px)' },
+          '100%': { opacity: '1', transform: 'scale(1) translateY(0)' },
+        },
+      },
+      animation: {
+        marquee: 'marquee 22s linear infinite',
+        'welcome-fade': 'welcome-fade 220ms ease-out both',
+        'welcome-pop': 'welcome-pop 480ms cubic-bezier(0.18, 0.89, 0.32, 1.1) both',
       },
     },
   },

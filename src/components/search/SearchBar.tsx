@@ -29,7 +29,7 @@ export function SearchBar({
       <form
         role="search"
         onSubmit={submit}
-        className="flex items-center gap-2 rounded-control border border-line bg-white p-1 shadow-sm transition-colors focus-within:border-brand-orange focus-within:ring-2 focus-within:ring-brand-orange/25"
+        className="flex items-center gap-2 rounded-control border border-line bg-white p-1 shadow-sm transition-all duration-standard ease-standard focus-within:border-brand-green focus-within:ring-4 focus-within:ring-brand-green/10"
       >
         <label htmlFor="search-page" className="sr-only">
           Search the SKIMART catalogue
@@ -40,7 +40,7 @@ export function SearchBar({
           value={value}
           onChange={(e) => setValue(e.target.value)}
           autoFocus={autoFocus}
-          className="h-11 w-full bg-transparent text-base text-ink outline-none placeholder:text-ink-muted"
+          className="h-11 w-full bg-transparent text-base text-ink outline-none placeholder:text-ink-muted focus-visible:outline-none"
           placeholder={placeholder}
         />
         {value && (
@@ -67,7 +67,7 @@ export function SearchBar({
     <form
       role="search"
       onSubmit={submit}
-      className="flex w-full items-center rounded-control border border-line bg-surface-subtle transition-colors focus-within:border-brand-orange focus-within:bg-white focus-within:ring-2 focus-within:ring-brand-orange/25"
+      className="flex w-full items-center rounded-control border border-line bg-surface-subtle transition-all duration-standard ease-standard focus-within:border-brand-green focus-within:bg-white focus-within:ring-4 focus-within:ring-brand-green/10"
     >
       <label htmlFor="search-header" className="sr-only">
         Search the SKIMART catalogue
@@ -78,7 +78,7 @@ export function SearchBar({
         value={value}
         onChange={(e) => setValue(e.target.value)}
         autoFocus={autoFocus}
-        className="h-11 w-full bg-transparent px-2.5 text-sm text-ink outline-none placeholder:text-ink-muted"
+        className="h-11 w-full bg-transparent px-2.5 text-sm text-ink outline-none placeholder:text-ink-muted focus-visible:outline-none"
         placeholder={placeholder}
       />
       {value && (

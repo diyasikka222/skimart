@@ -143,7 +143,7 @@ export function HeroBanner() {
           })}
         </div>
 
-        <div className="absolute bottom-4 right-4 z-20 flex items-center gap-2 sm:bottom-5 sm:right-6">
+        <div className="absolute bottom-3 right-3 z-20 flex items-center gap-0.5 sm:bottom-4 sm:right-4">
           {slides.map((slide, slideIndex) => (
             <button
               key={slide.eyebrow}
@@ -151,14 +151,19 @@ export function HeroBanner() {
               onClick={() => setIndex(slideIndex)}
               aria-label={`Go to slide ${slideIndex + 1} of ${slides.length}`}
               aria-current={slideIndex === index}
-              className={`h-2 rounded-full transition-all duration-standard ease-standard focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-orange ${
-                slideIndex === index ? 'w-6 bg-brand-orange' : 'w-2 bg-white/50 hover:bg-white/80'
-              }`}
-            />
+              className="group inline-flex h-9 min-w-9 items-center justify-center rounded-full px-1 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-orange"
+            >
+              <span
+                aria-hidden="true"
+                className={`block h-2 rounded-full transition-all duration-standard ease-standard ${
+                  slideIndex === index ? 'w-6 bg-brand-orange' : 'w-2 bg-white/50 group-hover:bg-white/80'
+                }`}
+              />
+            </button>
           ))}
         </div>
 
-        <div className="absolute bottom-4 left-4 z-20 flex items-center gap-2 sm:bottom-5 sm:left-6">
+        <div className="absolute bottom-3 left-3 z-20 flex items-center gap-2 sm:bottom-4 sm:left-4">
           <button
             type="button"
             onClick={() => advance(-1)}
